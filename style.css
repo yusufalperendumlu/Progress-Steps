@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Inter+Tight:wght@300&display=swap');
+
+*
+{
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Inter Tight', sans-serif;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: visible;
+    margin: 0;
+    background: rgb(2, 10, 6);
+    user-select: none;
+}
+
+.main
+{
+    text-align: center;
+}
+
+.main-progress
+{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 0 45px 0;
+    max-width: 100%;
+    width: 500px;
+}
+
+.main-progress::before
+{
+    content: "";
+    background-color: #272626;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+    height: 4px;
+    width: 100%;
+}
+
+.progress
+{
+    background-color: #492b69;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 5px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+
+
+.step
+{
+    background-color: rgb(2, 10, 6);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #fff;
+    transform: 0.4s ease;
+    cursor: pointer;
+}
+
+.step.active
+{
+    border-color: #492b69;
+}
+
+.btn
+{
+    transform: 5ms ease;
+}
+
+
+.btn:disabled
+{
+    cursor: not-allowed;
+    background-color: #3f3f3f;
+}
